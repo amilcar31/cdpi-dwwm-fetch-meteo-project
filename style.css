@@ -1,3 +1,137 @@
-body{
-    margin : 0px;
+/* ============================================
+   STYLES CSS COMPLETS (avec dégradé jour/nuit)
+   ============================================*/
+
+/* Reset & base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  transition: background 0.5s;
+  background: linear-gradient(#21569b, #279c95);
+  min-height: 100vh;
+  color: #333;
+}
+
+/* Thème nuit */
+body.night {
+  background: #2C3E50;
+  color: #f0f0f0;
+}
+
+/* En-tête */
+header {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 1rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Contrôles */
+.controls {
+  display: inline-flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.controls input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+
+.controls button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  background-color: #007ACC;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  background-color: #005A99;
+}
+
+/* Conteneur météo */
+#weather-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  min-height: 400px;
+}
+
+/* Carte météo */
+.weather-card {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+.weather-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.weather-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.weather-icon {
+  width: 100px;
+  height: 100px;
+}
+
+.temperature {
+  font-size: 2.5rem;
+  font-weight: bold;
+  display: block;
+}
+
+.weather-description {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* Détails météo simplifiés */
+.weather-card p {
+  font-size: 1rem;
+  margin: 0.25rem 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .controls {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .controls input,
+  .controls button {
+    width: 100%;
+  }
+
+  .weather-main {
+    flex-direction: column;
+    text-align: center;
+  }
 }
